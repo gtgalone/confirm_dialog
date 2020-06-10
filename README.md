@@ -7,7 +7,7 @@ https://pub.dev/packages/confirm_dialog
 
 ## Installation
 
-### Add package.yaml
+### Add pubspec.yaml
 ``` yaml
 dependencies:
   confirm_dialog: lastest_version

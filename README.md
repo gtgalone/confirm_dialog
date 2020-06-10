@@ -12,10 +12,6 @@ https://pub.dev/packages/confirm_dialog
 dependencies:
   confirm_dialog: lastest_version
 ```
-### Install Package
-```
-$ flutter pub get
-```
 ---
 ## Example
 

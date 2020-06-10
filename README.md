@@ -9,7 +9,7 @@ Confirm Dialog Widget for Flutter.
 ### Add package.yaml
 ``` yaml
 dependencies:
-  confirm_dialog: ^0.0.1
+  confirm_dialog: lastest_version
 ```
 ### Install Package
 ```

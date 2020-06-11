@@ -13,3 +13,7 @@
 # 0.0.4
 
   * Change readme.
+
+# 0.0.4
+
+  * Change button position.

@@ -1,6 +1,6 @@
 name: confirm_dialog
 description: Confirm Dialog Widget for Flutter. Use confirm dialog easy and simple for your flutter app.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/gtgalone/confirm_dialog
 
 environment:

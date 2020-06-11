@@ -21,13 +21,13 @@ class ConfirmDialog extends StatelessWidget {
     return AlertDialog(
       title: Text(message),
       actions: <Widget>[
-        FlatButton(child: Text(textOK), onPressed: onPressedOK),
         FlatButton(
             child: Text(textCancel),
             onPressed: () {
               if (onPressedCancel == null) return Navigator.of(context).pop();
               return onPressedCancel();
             }),
+        FlatButton(child: Text(textOK), onPressed: onPressedOK),
       ],
     );
   }

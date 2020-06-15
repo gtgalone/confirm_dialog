@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// The `message` argument is used to title of dialog.
+/// The `textOK` argument is used to text for 'OK' Button of dialog.
+/// The `textCancel` argument is used to text for 'Cancel' Button of dialog.
+///
+/// Returns a [Future<bool>].
 Future<bool> confirm(
   BuildContext context,
   {

@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/confirm_dialog.svg)](https://pub.dartlang.org/packages/confirm_dialog)
 
-Confirm Dialog Widget for Flutter.
+Confirm Dialog Widget for Flutter(JS-LIKE).
 https://pub.dev/packages/confirm_dialog
 
 ## Installation

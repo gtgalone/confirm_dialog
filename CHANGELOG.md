@@ -21,3 +21,7 @@
 # 0.0.6
 
   * Change to js-like.
+
+# 0.0.7
+
+  * Add API documents.

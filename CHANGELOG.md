@@ -25,3 +25,7 @@
 # 0.0.7
 
   * Add API documents.
+
+# 0.0.8
+
+  * Add Will pop scope.

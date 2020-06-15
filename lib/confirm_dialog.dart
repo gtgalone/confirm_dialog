@@ -14,11 +14,14 @@ Future<bool> confirm(
   }
 ) => showDialog(
   context: context,
-  builder: (_) => AlertDialog(
-    title: Text(message),
-    actions: <Widget>[
-      FlatButton(child: Text(textCancel), onPressed: () => Navigator.pop(context, false)),
-      FlatButton(child: Text(textOK), onPressed: () => Navigator.pop(context, true)),
-    ],
+  builder: (_) => WillPopScope(
+    child: AlertDialog(
+      title: Text(message),
+      actions: <Widget>[
+        FlatButton(child: Text(textCancel), onPressed: () => Navigator.pop(context, false)),
+        FlatButton(child: Text(textOK), onPressed: () => Navigator.pop(context, true)),
+      ],
+    ),
+    onWillPop: () { Navigator.pop(context, false); return; },
   ),
 );

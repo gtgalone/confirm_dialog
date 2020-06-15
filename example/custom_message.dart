@@ -16,15 +16,12 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: FlatButton(
             child: Text('Confirm Dialog'),
-            onPressed: () => showDialog(
-              context: context,
-              builder: (_) => ConfirmDialog(
-                onPressedOK: () => print('pressedOK'),
-                message: 'Would you like to remove?',
-                textOK: 'Yes',
-                textCancel: 'No',
-              ),
-            ),
+            onPressed: () async {
+              if (await confirm(context, message: 'Would you like to remove?', textOK: 'Yes', textCancel: 'No')) {
+                return print('pressedOK');
+              }
+              return print('pressedCancel');
+            },
           ),
         ),
       ),

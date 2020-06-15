@@ -14,6 +14,10 @@
 
   * Change readme.
 
-# 0.0.4
+# 0.0.5
 
   * Change button position.
+
+# 0.0.6
+
+  * Change to js-like.

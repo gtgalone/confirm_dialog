@@ -18,7 +18,7 @@ Future<bool> confirm(
   context: context,
   builder: (_) => WillPopScope(
     child: AlertDialog(
-      title: (title != null) ? title : null,
+      title: title,
       content: (content != null) ? content : Text('Are you sure continue?'),
       actions: <Widget>[
         FlatButton(child: textCancel != null ? textCancel : Text('Cancel'), onPressed: () => Navigator.pop(context, false)),

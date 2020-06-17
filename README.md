@@ -88,3 +88,15 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+---
+## Recommend Libraries
+
+- [Prompt Dialog](https://github.com/gtgalone/prompt_dialog) - Prompt Dialog Widget for Flutter(JS-LIKE).
+
+## Maintainer
+
+- [Jehun Seem](https://github.com/gtgalone)
+
+## License
+
+MIT

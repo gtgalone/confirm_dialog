@@ -11,8 +11,8 @@ Future<bool> confirm(
   {
     Widget title,
     Widget content,
-    String textOK: 'OK',
-    String textCancel: 'Cancel',
+    Widget textOK,
+    Widget textCancel,
   }
 ) => showDialog(
   context: context,
@@ -21,8 +21,8 @@ Future<bool> confirm(
       title: (title != null) ? title : null,
       content: (content != null) ? content : Text('Are you sure continue?'),
       actions: <Widget>[
-        FlatButton(child: Text(textCancel), onPressed: () => Navigator.pop(context, false)),
-        FlatButton(child: Text(textOK), onPressed: () => Navigator.pop(context, true)),
+        FlatButton(child: textCancel != null ? textCancel : Text('Cancel'), onPressed: () => Navigator.pop(context, false)),
+        FlatButton(child: textOK != null ? textOK : Text('OK'), onPressed: () => Navigator.pop(context, true)),
       ],
     ),
     onWillPop: () { Navigator.pop(context, false); return; },

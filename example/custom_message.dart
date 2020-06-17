@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
                 context,
                 title: Text('Confirm'),
                 content: Text('Would you like to remove?'),
-                textOK: 'Yes',
-                textCancel: 'No',
+                textOK: Text('Yes'),
+                textCancel: Text('No'),
               )) {
                 return print('pressedOK');
               }

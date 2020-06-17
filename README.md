@@ -13,7 +13,7 @@ dependencies:
   confirm_dialog: lastest_version
 ```
 ---
-## Example
+## Usage
 
 ### Basic
 ``` dart
@@ -74,8 +74,8 @@ class MyApp extends StatelessWidget {
                 context,
                 title: Text('Confirm'),
                 content: Text('Would you like to remove?'),
-                textOK: 'Yes',
-                textCancel: 'No',
+                textOK: Text('Yes'),
+                textCancel: Text('No'),
               )) {
                 return print('pressedOK');
               }
@@ -92,6 +92,7 @@ class MyApp extends StatelessWidget {
 ## Recommend Libraries
 
 - [Prompt Dialog](https://github.com/gtgalone/prompt_dialog) - Prompt Dialog Widget for Flutter(JS-LIKE).
+- [Alert Dialog](https://github.com/gtgalone/alert_dialog) - Alert Dialog Widget for Flutter(JS-LIKE).
 
 ## Maintainer
 

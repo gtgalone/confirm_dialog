@@ -33,3 +33,7 @@
 # 0.0.9
 
   * Add title and change passing as widget.
+
+# 0.1.0
+
+  * change passing as widget for button.

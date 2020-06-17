@@ -17,7 +17,13 @@ class MyApp extends StatelessWidget {
           child: FlatButton(
             child: Text('Confirm Dialog'),
             onPressed: () async {
-              if (await confirm(context, message: 'Would you like to remove?', textOK: 'Yes', textCancel: 'No')) {
+              if (await confirm(
+                context,
+                title: Text('Confirm'),
+                content: Text('Would you like to remove?'),
+                textOK: 'Yes',
+                textCancel: 'No',
+              )) {
                 return print('pressedOK');
               }
               return print('pressedCancel');

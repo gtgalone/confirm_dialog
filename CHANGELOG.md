@@ -36,4 +36,8 @@
 
 # 0.1.0
 
-  * change passing as widget for button.
+  * Change passing as widget for button.
+
+# 0.1.1
+
+  * Add example main.

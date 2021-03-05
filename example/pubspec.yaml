@@ -1,7 +1,7 @@
-name: confirm_dialog
-description: Confirm Dialog Widget JS-LIKE for Flutter. Use confirm dialog easy and simple for your flutter app.
+name: example
 version: 1.0.0
 homepage: https://github.com/gtgalone/confirm_dialog
+publish_to: "none"
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -9,7 +9,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  confirm_dialog:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  test: ^1.15.7
+
+dependency_overrides:
+  confirm_dialog:
+    path: ../

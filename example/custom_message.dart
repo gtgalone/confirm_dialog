@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to Flutter'),
         ),
         body: Center(
-          child: FlatButton(
+          child: TextButton(
             child: Text('Confirm Dialog'),
             onPressed: () async {
               if (await confirm(

@@ -7,24 +7,35 @@ import 'package:flutter/material.dart';
 ///
 /// Returns a [Future<bool>].
 Future<bool> confirm(
-  BuildContext context,
-  {
-    Widget title,
-    Widget content,
-    Widget textOK,
-    Widget textCancel,
-  }
-) => showDialog(
-  context: context,
-  builder: (_) => WillPopScope(
-    child: AlertDialog(
-      title: title,
-      content: (content != null) ? content : Text('Are you sure continue?'),
-      actions: <Widget>[
-        FlatButton(child: textCancel != null ? textCancel : Text('Cancel'), onPressed: () => Navigator.pop(context, false)),
-        FlatButton(child: textOK != null ? textOK : Text('OK'), onPressed: () => Navigator.pop(context, true)),
-      ],
+  BuildContext context, {
+  Widget? title,
+  Widget? content,
+  Widget? textOK,
+  Widget? textCancel,
+}) async {
+  final bool? isConfirm = await showDialog<bool>(
+    context: context,
+    builder: (_) => WillPopScope(
+      child: AlertDialog(
+        title: title,
+        content: (content != null) ? content : Text('Are you sure continue?'),
+        actions: <Widget>[
+          TextButton(
+            child: textCancel != null ? textCancel : Text('Cancel'),
+            onPressed: () => Navigator.pop(context, false),
+          ),
+          TextButton(
+            child: textOK != null ? textOK : Text('OK'),
+            onPressed: () => Navigator.pop(context, true),
+          ),
+        ],
+      ),
+      onWillPop: () async {
+        Navigator.pop(context, false);
+        return true;
+      },
     ),
-    onWillPop: () { Navigator.pop(context, false); return; },
-  ),
-);
+  );
+
+  return (isConfirm != null) ? isConfirm : false;
+}

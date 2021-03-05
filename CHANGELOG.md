@@ -41,3 +41,7 @@
 # 0.1.1
 
   * Add example main.
+
+# 1.0.0
+
+  * Apply null safety.

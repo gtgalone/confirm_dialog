@@ -49,3 +49,7 @@
 # 1.0.1
 
   * Apply analysis options.
+
+# 1.0.2
+
+  * Make dialog to scrollable.

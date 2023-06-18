@@ -18,14 +18,18 @@ Future<bool> confirm(
     builder: (_) => WillPopScope(
       child: AlertDialog(
         title: title,
-        content: content ?? const Text('Are you sure continue?'),
+        content: SingleChildScrollView(
+          child: content ?? const Text('Are you sure continue?'),
+        ),
         actions: <Widget>[
           TextButton(
-            child: textCancel ?? const Text('Cancel'),
+            child: textCancel ??
+                Text(MaterialLocalizations.of(context).cancelButtonLabel),
             onPressed: () => Navigator.pop(context, false),
           ),
           TextButton(
-            child: textOK ?? const Text('OK'),
+            child:
+                textOK ?? Text(MaterialLocalizations.of(context).okButtonLabel),
             onPressed: () => Navigator.pop(context, true),
           ),
         ],

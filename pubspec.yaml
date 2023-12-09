@@ -4,7 +4,7 @@ version: 1.0.3
 homepage: https://github.com/gtgalone/confirm_dialog
 
 environment:
-  sdk: '>=3.1.2 <4.0.0'
+  sdk: '>=3.2.2 <4.0.0'
 
 dependencies:
   flutter:

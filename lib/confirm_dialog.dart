@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 /// The `content` argument is used to content of alert dialog.
 /// The `textOK` argument is used to text for 'OK' Button of alert dialog.
 /// The `textCancel` argument is used to text for 'Cancel' Button of alert dialog.
+/// The `canPop` argument is `canPop` of PopScope.
+/// The `onPopInvoked` argument is `onPopInvoked` of PopScope.
 ///
 /// Returns a [Future<bool>].
 Future<bool> confirm(
@@ -12,10 +14,12 @@ Future<bool> confirm(
   Widget? content,
   Widget? textOK,
   Widget? textCancel,
+  bool canPop = false,
+  void Function(bool)? onPopInvoked,
 }) async {
   final bool? isConfirm = await showDialog<bool>(
     context: context,
-    builder: (_) => WillPopScope(
+    builder: (BuildContext context) => PopScope(
       child: AlertDialog(
         title: title,
         content: SingleChildScrollView(
@@ -34,12 +38,9 @@ Future<bool> confirm(
           ),
         ],
       ),
-      onWillPop: () async {
-        Navigator.pop(context, false);
-        return true;
-      },
+      canPop: canPop,
+      onPopInvoked: onPopInvoked,
     ),
   );
-
   return isConfirm ?? false;
 }

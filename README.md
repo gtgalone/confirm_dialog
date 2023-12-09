@@ -10,7 +10,7 @@ https://pub.dev/packages/confirm_dialog
 ### Add pubspec.yaml
 ``` yaml
 dependencies:
-  confirm_dialog: ^1.0.2
+  confirm_dialog: ^1.0.3
 ```
 ---
 ## Usage

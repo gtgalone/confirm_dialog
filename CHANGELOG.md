@@ -53,3 +53,8 @@
 # 1.0.2
 
   * Make dialog to scrollable.
+
+# 1.0.3
+
+  * Replace WillPopScope to PopScope.
+  * Change to pass parent context(#2). Huge Thanks! @millerf

@@ -5,6 +5,8 @@
 Confirm Dialog Widget for Flutter(JS-LIKE).
 https://pub.dev/packages/confirm_dialog
 
+![screenshot](https://github.com/user-attachments/assets/e9d30be1-3ddf-4985-822d-1542bd1d7aad)
+
 ## Installation
 
 ### Add pubspec.yaml

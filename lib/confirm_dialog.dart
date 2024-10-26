@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// The `textOK` argument is used to text for 'OK' Button of alert dialog.
 /// The `textCancel` argument is used to text for 'Cancel' Button of alert dialog.
 /// The `canPop` argument is `canPop` of PopScope.
-/// The `onPopInvoked` argument is `onPopInvoked` of PopScope.
+/// The `onPopInvokedWithResult` argument is `onPopInvokedWithResult` of PopScope.
 ///
 /// Returns a [Future<bool>].
 Future<bool> confirm(
@@ -15,7 +15,7 @@ Future<bool> confirm(
   Widget? textOK,
   Widget? textCancel,
   bool canPop = false,
-  void Function(bool)? onPopInvoked,
+  void Function(bool, dynamic)? onPopInvokedWithResult,
 }) async {
   final bool? isConfirm = await showDialog<bool>(
     context: context,
@@ -39,7 +39,7 @@ Future<bool> confirm(
         ],
       ),
       canPop: canPop,
-      onPopInvoked: onPopInvoked,
+      onPopInvokedWithResult: onPopInvokedWithResult,
     ),
   );
   return isConfirm ?? false;

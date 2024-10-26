@@ -58,3 +58,7 @@
 
   * Replace WillPopScope to PopScope.
   * Change to pass parent context(#2). Huge Thanks! @millerf
+
+# 1.0.4
+
+  * Change from `onPopInvoked` to `onPopInvokedWithResult`.
